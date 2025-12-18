@@ -22,7 +22,7 @@ const InvoicePreview: React.FC<InvoicePreviewProps> = ({ data }) => {
   const gridTemplate = "grid-cols-[45px_1fr_90px_85px_85px_100px_130px]";
 
   return (
-    <div className="bg-white text-black p-4 text-[11px] leading-tight font-sans print:p-0 w-full min-h-[296mm] max-h-[296mm] flex flex-col box-border">
+    <div className="bg-white text-black p-3 text-[11px] leading-tight font-sans print:p-0 w-full min-h-[282mm] max-h-[282mm] flex flex-col box-border overflow-hidden">
 
       {/* Header Info */}
       <div className="flex justify-between items-end mb-1 shrink-0">
@@ -35,9 +35,9 @@ const InvoicePreview: React.FC<InvoicePreviewProps> = ({ data }) => {
       <div className="border border-black flex-1 flex flex-col overflow-hidden">
         {/* Company Header */}
         <div className="flex border-b border-black shrink-0">
-          <div className="w-[60%] p-3 border-r border-black flex gap-5">
+          <div className="w-[60%] p-2 border-r border-black flex gap-4">
             <div className="flex flex-col items-center shrink-0">
-              <div className="w-24 h-auto flex flex-col items-center">
+              <div className="w-20 h-auto flex flex-col items-center">
                 <svg viewBox="0 0 200 100" className="w-full h-auto text-[#7c6d62]" preserveAspectRatio="xMidYMid meet">
                   <path d="M20,60 Q50,40 80,45 T130,55 T180,60 Q150,70 100,75 T20,70 Z" fill="currentColor" opacity="0.2" />
                   <path d="M20,60 Q50,40 80,45 T130,55 T180,60" stroke="currentColor" strokeWidth="2" fill="none" />
@@ -80,7 +80,7 @@ const InvoicePreview: React.FC<InvoicePreviewProps> = ({ data }) => {
 
         {/* Bill To & Ship To */}
         <div className="flex border-b border-black shrink-0">
-          <div className="w-1/2 p-2 border-r border-black min-h-[85px]">
+          <div className="w-1/2 p-2 border-r border-black min-h-[70px]">
             <p className="font-bold mb-1 border-b border-gray-300 pb-0.5 text-[8px] text-gray-400 uppercase">BILL TO</p>
             <p className="font-bold uppercase text-[11px] leading-tight mb-1">{data.buyer.name}</p>
             <p className="text-[10px] leading-tight mb-1 opacity-90">{data.buyer.addressLine1}, {data.buyer.addressLine2}</p>
@@ -89,7 +89,7 @@ const InvoicePreview: React.FC<InvoicePreviewProps> = ({ data }) => {
               <p><span className="font-bold">Mobile:</span> {data.buyer.mobile}</p>
             </div>
           </div>
-          <div className="w-1/2 p-2 min-h-[85px]">
+          <div className="w-1/2 p-2 min-h-[70px]">
             <p className="font-bold mb-1 border-b border-gray-300 pb-0.5 text-[8px] text-gray-400 uppercase">SHIP TO</p>
             <p className="font-bold uppercase text-[11px] leading-tight mb-1">{data.consignee.name}</p>
             <p className="text-[10px] leading-tight opacity-90">{data.consignee.addressLine1}, {data.consignee.addressLine2}</p>
@@ -209,7 +209,7 @@ const InvoicePreview: React.FC<InvoicePreviewProps> = ({ data }) => {
             <p className="font-bold text-[10px] italic capitalize text-gray-700">{numberToWords(totals.grandTotal)}</p>
           </div>
 
-          <div className="flex divide-x divide-black min-h-[80px]">
+          <div className="flex divide-x divide-black min-h-[65px]">
             <div className="w-1/2 p-2">
               <p className="font-bold text-[7px] uppercase text-gray-400 mb-1 underline">Terms & Conditions</p>
               <ol className="list-decimal list-inside text-[7px] space-y-0.5 font-medium text-gray-500 leading-tight">
@@ -223,7 +223,7 @@ const InvoicePreview: React.FC<InvoicePreviewProps> = ({ data }) => {
                 <img
                   src="/signature.png"
                   alt="Authorized Signature"
-                  className="w-44 h-auto object-contain mb-1"
+                  className="w-32 h-auto object-contain"
                 />
               </div>
               <div className="text-center w-full border-t border-gray-300 pt-1">

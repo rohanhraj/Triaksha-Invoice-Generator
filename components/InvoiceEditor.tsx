@@ -180,6 +180,7 @@ const InvoiceEditor: React.FC<InvoiceEditorProps> = ({ data, onChange }) => {
                   >
                     <option value="PCS">PCS</option>
                     <option value="KGS">KGS</option>
+                    <option value="MT">MT</option>
                     <option value="NOS">NOS</option>
                     <option value="BOX">BOX</option>
                   </select>
