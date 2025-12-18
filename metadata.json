@@ -1,0 +1,5 @@
+{
+  "name": "GenInvoice",
+  "description": "A smart, AI-powered invoice generator that replicates standard tax invoice formats. Features real-time calculation, PDF printing, and URL-based sharing.",
+  "requestFramePermissions": []
+}
