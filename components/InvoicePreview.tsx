@@ -221,7 +221,7 @@ const InvoicePreview: React.FC<InvoicePreviewProps> = ({ data }) => {
             <div className="w-1/2 p-2 flex flex-col justify-between items-center">
               <div className="flex flex-col items-center justify-center flex-1 pt-1">
                 <img
-                  src="/signature.jpg"
+                  src="/signature.png"
                   alt="Authorized Signature"
                   className="w-28 h-auto object-contain"
                 />
