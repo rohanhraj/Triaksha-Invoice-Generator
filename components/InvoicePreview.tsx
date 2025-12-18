@@ -218,16 +218,16 @@ const InvoicePreview: React.FC<InvoicePreviewProps> = ({ data }) => {
                 ))}
               </ol>
             </div>
-            <div className="w-1/2 p-2 flex flex-col justify-between items-center">
-              <div className="flex flex-col items-center justify-center flex-1 pt-1">
+            <div className="w-1/2 p-2 flex flex-col justify-end items-center">
+              <div className="flex flex-col items-center justify-end">
                 <img
                   src="/signature.png"
                   alt="Authorized Signature"
-                  className="w-28 h-auto object-contain"
+                  className="w-44 h-auto object-contain mb-1"
                 />
               </div>
-              <div className="text-center w-full">
-                <p className="text-[7px] font-bold text-gray-400 mb-1 uppercase">Authorised Signatory For</p>
+              <div className="text-center w-full border-t border-gray-300 pt-1">
+                <p className="text-[7px] font-bold text-gray-400 uppercase">Authorised Signatory For</p>
                 <p className="font-black uppercase text-[10px]">{data.signatureName}</p>
               </div>
             </div>
