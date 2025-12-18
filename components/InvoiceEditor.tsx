@@ -47,6 +47,40 @@ const InvoiceEditor: React.FC<InvoiceEditorProps> = ({ data, onChange }) => {
     <div className="space-y-6 bg-white p-6 rounded-lg shadow-sm border border-gray-200 h-full overflow-y-auto">
       <h2 className="text-xl font-bold text-gray-800 border-b pb-2">Edit Details</h2>
 
+      {/* Invoice Details Section */}
+      <section>
+        <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">Invoice Details</h3>
+        <div className="grid grid-cols-2 gap-3">
+          <div>
+            <label className="text-xs text-gray-500 block mb-1">Invoice No.</label>
+            <input
+              className="border p-2 rounded text-sm w-full"
+              placeholder="Invoice No."
+              value={data.invoiceNo}
+              onChange={e => onChange({ ...data, invoiceNo: e.target.value })}
+            />
+          </div>
+          <div>
+            <label className="text-xs text-gray-500 block mb-1">Invoice Date</label>
+            <input
+              type="date"
+              className="border p-2 rounded text-sm w-full"
+              value={data.date}
+              onChange={e => onChange({ ...data, date: e.target.value })}
+            />
+          </div>
+          <div className="col-span-2">
+            <label className="text-xs text-gray-500 block mb-1">Due Date</label>
+            <input
+              type="date"
+              className="border p-2 rounded text-sm w-full"
+              value={data.dueDate}
+              onChange={e => onChange({ ...data, dueDate: e.target.value })}
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Bill To Section */}
       <section>
         <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">Bill To</h3>
