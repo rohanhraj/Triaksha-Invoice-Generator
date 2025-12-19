@@ -209,26 +209,24 @@ const InvoicePreview: React.FC<InvoicePreviewProps> = ({ data }) => {
             <p className="font-bold text-[10px] italic capitalize text-gray-700">{numberToWords(totals.grandTotal)}</p>
           </div>
 
-          <div className="flex divide-x divide-black min-h-[65px]">
-            <div className="w-1/2 p-2">
-              <p className="font-bold text-[7px] uppercase text-gray-400 mb-1 underline">Terms & Conditions</p>
-              <ol className="list-decimal list-inside text-[7px] space-y-0.5 font-medium text-gray-500 leading-tight">
+          <div className="flex divide-x divide-black min-h-[55px]">
+            <div className="w-1/2 p-1.5">
+              <p className="font-bold text-[7px] uppercase text-gray-400 mb-0.5 underline">Terms & Conditions</p>
+              <ol className="list-decimal list-inside text-[7px] space-y-0 font-medium text-gray-500 leading-tight">
                 {data.terms.map((term, i) => (
                   <li key={i}>{term}</li>
                 ))}
               </ol>
             </div>
-            <div className="w-1/2 p-2 flex flex-col justify-end items-center">
-              <div className="flex flex-col items-center justify-end">
-                <img
-                  src="/signature.png"
-                  alt="Authorized Signature"
-                  className="w-32 h-auto object-contain"
-                />
-              </div>
-              <div className="text-center w-full border-t border-gray-300 pt-1">
-                <p className="text-[7px] font-bold text-gray-400 uppercase">Authorised Signatory For</p>
-                <p className="font-black uppercase text-[10px]">{data.signatureName}</p>
+            <div className="w-1/2 p-1.5 flex flex-col justify-center items-center">
+              <img
+                src="/signature.png"
+                alt="Authorized Signature"
+                className="w-32 h-[40px] object-contain object-center"
+              />
+              <div className="text-center w-full border-t border-gray-300 pt-0.5 mt-0.5">
+                <p className="text-[7px] font-bold text-gray-400 uppercase leading-none">Authorised Signatory For</p>
+                <p className="font-black uppercase text-[9px] leading-tight">{data.signatureName}</p>
               </div>
             </div>
           </div>
